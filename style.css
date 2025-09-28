@@ -1,0 +1,70 @@
+/* Basic reset and global styles */
+:root{
+  font-size:16px; /* base for rem units */
+}
+html,body{
+  height:100%;
+  margin:0;
+  overflow: hidden;
+}
+
+body{
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height:1.5;
+  color:#000000;
+  /* fixed background image that does not scroll */
+  background-color: #0f172a; 
+  background-image: url('../images/bkgd.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* button directory bar that sits outside the div */
+.buttons{
+  position:fixed;
+  top:1rem;
+  left:50%;
+  transform:translateX(-50%); /* center horizontally */
+  z-index:9999; /* sit on top of other content */
+  display:flex;
+  gap:0.5rem;
+  background:rgba(230, 190, 241, 0.123);
+  padding:0.4rem;
+  border-radius:0.5rem; /* rounded corners */
+  backdrop-filter: blur(6px);
+}
+.buttons a{
+  display:inline-block;
+  padding:0.5rem 0.9rem;
+  color:#d89cf0;
+  text-decoration:none; 
+  border-radius:0.375rem;
+  font-weight:600;
+  font-size:0.95rem;
+}
+.buttons a:hover{background:rgba(14, 2, 36, 0.39)}
+
+/* box scrolls */
+.box{
+  
+  box-sizing:border-box;
+  width:100%;
+  max-width:64rem;
+  margin:5rem auto 3rem; 
+  height:calc(100vh - 8rem);
+  background:rgba(145, 118, 140, 0.856);
+  border-radius:0.5rem;
+  overflow:auto;
+  padding:1.25rem;
+  box-shadow:0 10px 30px rgba(255, 255, 255, 0.068);
+  /* hide scrollbar */
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.box h1, .box h2, .box h3{color:#c598da}
+.lead{font-size:1.125rem}
+
+
